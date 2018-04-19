@@ -52,7 +52,7 @@ endif()
 list(APPEND SOURCE ${proto_srcs}) 
 add_library(pslite ${SOURCE}) 
 
-target_link_libraries(pslite ${pslite_LINKER_LIBS})
+target_link_libraries(pslite ${pslite_LINKER_LIBS} -lpthread)
 
 # FindProtobuf behavior changed from cmake 3.6 onwards
 IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} GREATER 3.6)
